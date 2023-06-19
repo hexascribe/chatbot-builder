@@ -6,19 +6,6 @@
 	<array>
 		<dict>
 			<key>LibraryIdentifier</key>
-			<string>ios-arm64_arm64e</string>
-			<key>LibraryPath</key>
-			<string>ChatBotBuilder.framework</string>
-			<key>SupportedArchitectures</key>
-			<array>
-				<string>arm64</string>
-				<string>arm64e</string>
-			</array>
-			<key>SupportedPlatform</key>
-			<string>ios</string>
-		</dict>
-		<dict>
-			<key>LibraryIdentifier</key>
 			<string>ios-arm64_arm64e_x86_64-simulator</string>
 			<key>LibraryPath</key>
 			<string>ChatBotBuilder.framework</string>
@@ -32,6 +19,19 @@
 			<string>ios</string>
 			<key>SupportedPlatformVariant</key>
 			<string>simulator</string>
+		</dict>
+		<dict>
+			<key>LibraryIdentifier</key>
+			<string>ios-arm64_arm64e</string>
+			<key>LibraryPath</key>
+			<string>ChatBotBuilder.framework</string>
+			<key>SupportedArchitectures</key>
+			<array>
+				<string>arm64</string>
+				<string>arm64e</string>
+			</array>
+			<key>SupportedPlatform</key>
+			<string>ios</string>
 		</dict>
 	</array>
 	<key>CFBundlePackageType</key>

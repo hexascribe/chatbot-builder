@@ -2,8 +2,8 @@ package base
 
 import androidx.compose.ui.graphics.ImageBitmap
 import chat.model.ChatDefaults
-import chat.theme.DarkColors
-import chat.theme.DefaultColors
+import chat.theme.color.DarkColors
+import chat.theme.color.DefaultColors
 import co.yml.ychat.domain.model.ChatMessage
 
 abstract class BaseBuilder<COLOR, IMAGE : Any, VIEW : Any> {

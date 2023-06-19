@@ -3,9 +3,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import base.BaseBuilder
 import base.BaseColorsBuilder
-import chat.theme.Colors
-import chat.theme.DarkColors
-import chat.theme.DefaultColors
+import chat.theme.color.Colors
+import chat.theme.color.DarkColors
+import chat.theme.color.DefaultColors
 import impl.ChatBotImpl
 
 abstract class ChatBot {

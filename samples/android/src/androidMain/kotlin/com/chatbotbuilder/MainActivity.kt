@@ -4,6 +4,7 @@ import ChatBot
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.runtime.Composable
 import base.RoleEnum
 
 class MainActivity : AppCompatActivity() {
@@ -11,14 +12,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            val chatkit = ChatBot.Builder("")
-                .setDarkMode(true)
-                .addMessage(RoleEnum.USER, "Teste")
-                .addPreSeededMessage(RoleEnum.SYSTEM, "Você é um assistente virtual que somente tira dúvidas relacionadas a programação")
-                .setInputFieldBorderWidth(1)
-                .build()
-
-            chatkit.ChatScreen()
+            ChatScreen()
         }
     }
+}
+
+@Composable
+fun ChatScreen() {
+    val chatBot = ChatBot.Builder("YOUR_OPEN_AI_KEY")
+        .setDarkMode(false)
+        .addMessage(RoleEnum.ASSISTANT, "Hi, how can I help you today?")
+        .addPreSeededMessage(RoleEnum.SYSTEM, "You are a helpful seller car assistant")
+        .setInputFieldBorderWidth(1)
+        .build()
+    chatBot.ChatScreen()
 }

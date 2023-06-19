@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.Icons
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -11,9 +12,9 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.unit.dp
-import chat.theme.DarkColors
-import chat.theme.DefaultColors
-import chat.theme.IconResource
+import chat.theme.color.DarkColors
+import chat.theme.color.DefaultColors
+import chat.theme.icons.IconBot
 import co.yml.ychat.domain.model.ChatMessage
 
 internal data class ChatDefaults(
@@ -46,7 +47,7 @@ internal data class ChatDefaults(
                     .background(Color(0xFF19C37D))
                     .padding(4.dp),
                 tint = Color.White,
-                painter = IconResource.BOT.painter(),
+                imageVector = Icons.IconBot(),
                 contentDescription = null
             )
         }

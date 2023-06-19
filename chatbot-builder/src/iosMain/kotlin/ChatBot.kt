@@ -7,9 +7,9 @@ import impl.ChatBotImpl
 import platform.UIKit.UIColor
 import platform.UIKit.UIImage
 import platform.UIKit.UIViewController
-import chat.theme.Colors
-import chat.theme.DarkColors
-import chat.theme.DefaultColors
+import chat.theme.color.Colors
+import chat.theme.color.DarkColors
+import chat.theme.color.DefaultColors
 import utils.toColor
 import utils.toHexString
 import utils.toSkiaImage

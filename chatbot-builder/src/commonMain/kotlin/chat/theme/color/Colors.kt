@@ -1,4 +1,4 @@
-package chat.theme
+package chat.theme.color
 
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.getValue

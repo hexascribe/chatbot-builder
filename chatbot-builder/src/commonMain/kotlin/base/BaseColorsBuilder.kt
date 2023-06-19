@@ -1,7 +1,7 @@
 package base
 
 import androidx.compose.ui.graphics.Color
-import chat.theme.Colors
+import chat.theme.color.Colors
 
 abstract class BaseColorsBuilder<T, C: Colors> {
     internal abstract var colors: Colors

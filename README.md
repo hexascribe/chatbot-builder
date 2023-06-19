@@ -14,6 +14,77 @@ Welcome to the ChatBot Builder SDK, a powerful tool that enables developers to e
 - **Cross-Platform Compatibility**: Our SDK supports both Android and iOS platforms, allowing you to reach a wider audience and deliver consistent chatbot experiences across different devices;
 - **Powered by OpenAI API**: Leveraging the cutting-edge capabilities of the OpenAI API, our SDK ensures that your chatbot is equipped with state-of-the-art natural language processing and machine learning capabilities.
 
+## ⚡️ Getting Started
+
+First, you need to obtain the OpenAI API Key, which can be acquired from your [OpenAI Platform Account](https://platform.openai.com/account/api-keys).
+
+### iOS setup
+
+Chatbot-Builder supports iOS 14.1+ and Xcode 12.1+. We are using CocoaPods as dependency manager. Add the following to your Podfile:
+
+```ruby
+pod 'ChatbotBuilder', '~> 0.0.1'
+```
+
+See the code snippet below on how to initialize and use the SDK in SwiftUI:
+
+```swift
+struct MyViewControllerWrapper: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> UIViewController {
+        let defaultColorsBuilders = ChatBot.DefaultColorsBuilder()
+            .setSendButtonColor(color: UIColor.purple)
+            .setInputFieldFocusedIndicatorColor(color: UIColor.purple)
+        
+        let chatBot = ChatBot.Builder(apiKey: "YOUR_OPEN_AI_KEY")
+            .setDefaultColorsBuilder(defaultColorsBuilder: defaultColorsBuilders)
+            .setDarkMode(isEnabled: false)
+            .addMessage(role: .assistant, content: "Hi, how can I help you today?")
+            .addPreSeededMessage(role: .assistant, content: "You are a helpful seller car assistant")
+            .setInputFieldBorderWidth(borderWidth: 1)
+            .build()
+        
+        return chatBot.getViewController()
+    }
+
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        // Implement this method if you need to update the UIViewController based on changes in SwiftUI
+    }
+}
+```
+
+### Android setup
+
+Add the following line to import the library via Gradle. First, make sure Maven Central has been added:
+
+
+```kotlin
+repositories {
+    mavenCentral()
+    // ...
+}
+```
+
+Then, simply import the dependency to your `build.gradle` dependencies:
+
+```kotlin
+implementation("com.arstechna:chatbot-builder:0.0.1")
+```
+
+Take a look at the Kotlin code snippet below for an example of how to initialize and use the SDK:
+
+```kotlin
+@Composable
+fun ChatScreen() {
+    val chatBot = ChatBot.Builder("YOUR_OPEN_AI_KEY")
+        .setDarkMode(true)
+        .addMessage(RoleEnum.ASSISTANT, "Hi, how can I help you today?")
+        .addPreSeededMessage(RoleEnum.SYSTEM, "You are a helpful seller car assistant")
+        .setInputFieldBorderWidth(1)
+        .build()
+    chatBot.ChatScreen()
+}
+```
+
 ## ℹ️ Sample apps
 
 Take a look at our sample apps to learn how to use the SDK on different platforms:
