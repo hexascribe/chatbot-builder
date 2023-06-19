@@ -1,0 +1,24 @@
+[versions]
+ychat = "1.4.1"
+kotlin = "1.8.20"
+composePlugin = "1.4.0"
+gradlePlugin = "8.0.2"
+activityCompose = "1.7.2"
+coreKtx = "1.10.1"
+appCompat = "1.6.1"
+compile-sdk = "33"
+min-sdk = "24"
+target-sdk = "33"
+
+[libraries]
+# Network
+ychat = { group = "co.yml", name = "ychat", version.ref = "ychat" }
+
+# AndroidX
+activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+app-compat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appCompat" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "gradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "gradlePlugin" }
