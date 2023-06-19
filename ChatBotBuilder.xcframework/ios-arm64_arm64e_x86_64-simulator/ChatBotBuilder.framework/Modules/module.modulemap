@@ -1,0 +1,6 @@
+framework module ChatBotBuilder {
+    umbrella header "ChatBotBuilder.h"
+
+    export *
+    module * { export * }
+}

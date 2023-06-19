@@ -1,0 +1,2 @@
+ChatBotBuilder.xcframework/ios-arm64_arm64e_x86_64-simulator/ChatBotBuilder.framework/ChatBotBuilder filter=lfs diff=lfs merge=lfs -text
+ChatBotBuilder.xcframework/ios-arm64_arm64e/ChatBotBuilder.framework/ChatBotBuilder filter=lfs diff=lfs merge=lfs -text
