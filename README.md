@@ -73,7 +73,7 @@ repositories {
 Then, simply import the dependency to your `build.gradle` dependencies:
 
 ```kotlin
-implementation("com.arstechna:chatbot-builder:0.0.1")
+implementation("io.github.arstechna:chatbot-builder:0.0.1")
 ```
 
 Take a look at the Kotlin code snippet below for an example of how to initialize and use the SDK:

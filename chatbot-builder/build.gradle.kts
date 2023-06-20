@@ -29,6 +29,17 @@ kotlin {
         extraSpecAttributes["resources"] = "['src/commonMain/resources/**', 'src/iosMain/resources/**']"
     }
 
+    dependencies {
+        constraints {
+            commonMainImplementation("org.jetbrains.kotlinx:atomicfu") {
+                version {
+                    strictly("[0.20.2,)")
+                }
+                because("https://youtrack.jetbrains.com/issue/KT-57235")
+            }
+        }
+    }
+
     sourceSets {
         val commonMain by getting {
             dependencies {
@@ -40,15 +51,6 @@ kotlin {
                 implementation(compose.components.resources)
             }
         }
-        val androidMain by getting {
-            dependencies {
-                implementation(compose.uiTooling)
-                implementation(compose.preview)
-                implementation(libs.activity.compose)
-                implementation(libs.core.ktx)
-                implementation(libs.app.compat)
-            }
-        }
         val iosX64Main by getting
         val iosArm64Main by getting
         val iosSimulatorArm64Main by getting
@@ -58,6 +60,12 @@ kotlin {
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
         }
+    }
+}
+
+kotlin {
+    android {
+        publishLibraryVariants("release")
     }
 }
 
