@@ -20,14 +20,6 @@ Welcome to the ChatBot Builder SDK, a powerful tool that enables developers to e
 |:-------------------------------------------------------------:|:-----------------------------------------------------------:|
 | <img src="art/chat-fitness-showcase.gif" alt="fitness-chat"/> | <img src="art/chat-health-showcase.gif" alt="health-chat"/> |
 
-### Fitness Coach
-
-<img src="art/chat-fitness-showcase.gif" alt="fitness-chat" width="25%" height="25%" />
-
-### Health GPT
-
-<img src="art/chat-health-showcase.gif" alt="health-chat" width="25%" height="25%" />
-
 ## ⚡️ Getting Started
 
 First, you need to obtain the OpenAI API Key, which can be acquired from your [OpenAI Platform Account](https://platform.openai.com/account/api-keys).
