@@ -20,10 +20,10 @@ First, you need to obtain the OpenAI API Key, which can be acquired from your [O
 
 ### iOS setup
 
-Chatbot-Builder supports iOS 14.1+ and Xcode 12.1+. We are using CocoaPods as dependency manager. Add the following to your Podfile:
+ChatBot Builder supports iOS 14.1+ and Xcode 12.1+. We are using CocoaPods as dependency manager. Add the following to your Podfile:
 
 ```ruby
-pod 'ChatbotBuilder', '~> 0.0.1'
+pod 'ChatBotBuilder', :git => 'https://github.com/ars-techna/chatbot-builder.git', :tag => '0.0.1'
 ```
 
 See the code snippet below on how to initialize and use the SDK in SwiftUI:

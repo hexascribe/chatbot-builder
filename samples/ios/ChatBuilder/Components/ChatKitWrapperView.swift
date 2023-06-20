@@ -10,18 +10,30 @@ import SwiftUI
 
 struct ChatKitWrapperView: View {
     
-    let chatKitFactory: ChatBotFactory
+    private let chatKitFactory: ChatBotFactory
+    
+    private var bottomSafeAreaColor: Color
     
     @Environment(\.dismiss)
     private var dismiss
     
+    init(chatKitFactory: ChatBotFactory, _ bottomSafeAreaColor: Color = .white) {
+        self.chatKitFactory = chatKitFactory
+        self.bottomSafeAreaColor = bottomSafeAreaColor
+    }
+    
     var body: some View {
-        ComposeView(chatKitFactory: chatKitFactory)
-            .applyToolbar(
-                logo: chatKitFactory.logo(),
-                background: chatKitFactory.toolbarColor(),
-                backButtonColor: chatKitFactory.toolbarBackButtonColor(),
-                onBackClick: { dismiss() }
-            )
+        VStack(spacing: 0) {
+            ComposeView(chatKitFactory: chatKitFactory)
+                .applyToolbar(
+                    logo: chatKitFactory.logo(),
+                    title: chatKitFactory.toolbarTitle(),
+                    background: chatKitFactory.toolbarColor(),
+                    backButtonColor: chatKitFactory.toolbarBackButtonColor(),
+                    onBackClick: { dismiss() }
+                )
+            bottomSafeAreaColor.frame(height: 20)
+        }
+        .edgesIgnoringSafeArea(.bottom)
     }
 }

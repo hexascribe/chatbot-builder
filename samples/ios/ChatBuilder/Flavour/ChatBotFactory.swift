@@ -14,7 +14,9 @@ protocol ChatBotFactory {
     
     func factory() -> ChatBot
     
-    func logo() -> String
+    func logo() -> String?
+    
+    func toolbarTitle() -> String?
     
     func toolbarColor() -> Color
     
@@ -24,5 +26,13 @@ protocol ChatBotFactory {
 extension ChatBotFactory {
     func toolbarBackButtonColor() -> Color {
         .white
+    }
+    
+    func toolbarTitle() -> String? {
+        nil
+    }
+    
+    func logo() -> String? {
+        nil
     }
 }

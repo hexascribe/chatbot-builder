@@ -11,6 +11,12 @@ import SwiftUI
 struct MainView: View {
     
     @State
+    private var showHealth: Bool = false
+    
+    @State
+    private var showFitness: Bool = false
+    
+    @State
     private var showWalmartHealthChat: Bool = false
     
     @State
@@ -21,6 +27,16 @@ struct MainView: View {
             VStack {
                 Text("ChatBot SDK Sample")
                     .padding(.bottom, 24)
+                button(
+                    text: "Health",
+                    backgroundColor: Color.health,
+                    onAction: { showHealth.toggle() }
+                )
+                button(
+                    text: "Fitness",
+                    backgroundColor: Color.fitness,
+                    onAction: { showFitness.toggle() }
+                )
                 button(
                     text: "Walmart Health",
                     backgroundColor: Color.walmartHealth,
@@ -34,6 +50,13 @@ struct MainView: View {
                 Spacer()
             }
             .padding(24)
+            .navigationDestination(isPresented: $showHealth) {
+                ChatKitWrapperView(chatKitFactory: HealthChatBot())
+            }
+            .navigationDestination(isPresented: $showFitness) {
+                ChatKitWrapperView(chatKitFactory: FitnessChatBot(), .black)
+                    .preferredColorScheme(.dark)
+            }
             .navigationDestination(isPresented: $showWalmartHealthChat) {
                 ChatKitWrapperView(chatKitFactory: WalmartHealthChatBot())
             }

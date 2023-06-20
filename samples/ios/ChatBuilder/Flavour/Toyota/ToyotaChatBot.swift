@@ -33,7 +33,7 @@ class ToyotaChatBot: ChatBotFactory {
         return chatbot
     }
     
-    func logo() -> String {
+    func logo() -> String? {
         "logo_toyota"
     }
     

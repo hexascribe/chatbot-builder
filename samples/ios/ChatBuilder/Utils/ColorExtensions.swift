@@ -20,11 +20,26 @@ extension Color {
         )
     }
     
+    static var health: Color {
+        Color(hex: 0x3E6D49)
+    }
+    
+    static var fitness: Color {
+        Color(hex: 0x448AFF)
+    }
+    
     static var walmartHealth: Color {
         Color(hex: 0x449fbc)
     }
     
     static var toyota: Color {
         Color(hex: 0xE80C1C)
+    }
+}
+
+extension UIColor {
+    convenience init(_ hex: UInt, alpha: Double = 1) {
+        let color = Color(hex: hex, alpha: alpha)
+        self.init(color)
     }
 }

@@ -31,7 +31,7 @@ class WalmartHealthChatBot: ChatBotFactory {
             .build()
     }
     
-    func logo() -> String {
+    func logo() -> String? {
         "logo_walmart"
     }
     

@@ -11,7 +11,8 @@ import SwiftUI
 extension View {
     
     func applyToolbar(
-        logo: String,
+        logo: String?,
+        title: String?,
         background: Color,
         backButtonColor: Color,
         onBackClick: @escaping () -> Void = {}
@@ -26,7 +27,12 @@ extension View {
                                 .renderingMode(.template)
                                 .tint(backButtonColor)
                         }
-                        Image(logo)
+                        if let logo = logo {
+                            Image(logo)
+                        }
+                        if let title = title {
+                            Text(title)
+                        }
                     }
                 }
             }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,8 @@
 		489D12F02A3AAF7F0034AD83 /* ChatKitWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489D12EF2A3AAF7F0034AD83 /* ChatKitWrapperView.swift */; };
 		489D12F22A3AB1790034AD83 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489D12F12A3AB1790034AD83 /* ViewExtensions.swift */; };
 		489D12F52A3AC3000034AD83 /* ToyotaChatBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489D12F42A3AC3000034AD83 /* ToyotaChatBot.swift */; };
+		489D13552A411C400034AD83 /* FitnessChatBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489D13542A411C400034AD83 /* FitnessChatBot.swift */; };
+		489D13582A413A0F0034AD83 /* HealthChatBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489D13572A413A0F0034AD83 /* HealthChatBot.swift */; };
 		4F338559F7385BDE2BD9C2DA /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFCC28B007A9D7132A86210 /* Pods_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		489D12EF2A3AAF7F0034AD83 /* ChatKitWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatKitWrapperView.swift; sourceTree = "<group>"; };
 		489D12F12A3AB1790034AD83 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		489D12F42A3AC3000034AD83 /* ToyotaChatBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToyotaChatBot.swift; sourceTree = "<group>"; };
+		489D13542A411C400034AD83 /* FitnessChatBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessChatBot.swift; sourceTree = "<group>"; };
+		489D13572A413A0F0034AD83 /* HealthChatBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthChatBot.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* My application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My application.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9232069A04E9C6925A6D2108 /* Pods-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.release.xcconfig"; path = "Target Support Files/Pods-ios/Pods-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 		489D12E42A3AA7210034AD83 /* Flavour */ = {
 			isa = PBXGroup;
 			children = (
+				489D13562A413A020034AD83 /* Health */,
+				489D13522A411B620034AD83 /* Fitness */,
 				489D12F32A3AC2F10034AD83 /* Toyota */,
 				489D12E52A3AA73A0034AD83 /* WalmartHealth */,
 				489D12E62A3AA74B0034AD83 /* ChatBotFactory.swift */,
@@ -130,6 +136,22 @@
 				489D12F42A3AC3000034AD83 /* ToyotaChatBot.swift */,
 			);
 			path = Toyota;
+			sourceTree = "<group>";
+		};
+		489D13522A411B620034AD83 /* Fitness */ = {
+			isa = PBXGroup;
+			children = (
+				489D13542A411C400034AD83 /* FitnessChatBot.swift */,
+			);
+			path = Fitness;
+			sourceTree = "<group>";
+		};
+		489D13562A413A020034AD83 /* Health */ = {
+			isa = PBXGroup;
+			children = (
+				489D13572A413A0F0034AD83 /* HealthChatBot.swift */,
+			);
+			path = Health;
 			sourceTree = "<group>";
 		};
 		7555FF72242A565900829871 = {
@@ -194,7 +216,6 @@
 				7555FF77242A565900829871 /* Sources */,
 				7555FF79242A565900829871 /* Resources */,
 				F85CB1118929364A9C6EFABC /* Frameworks */,
-				2134C13603D0B299603D9F49 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,23 +272,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2134C13603D0B299603D9F49 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ios/Pods-ios-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ios/Pods-ios-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios/Pods-ios-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		98D614C51D2DA07C614CC46E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,8 +303,10 @@
 			files = (
 				489D12E72A3AA74B0034AD83 /* ChatBotFactory.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
+				489D13552A411C400034AD83 /* FitnessChatBot.swift in Sources */,
 				489D12E32A3AA6F00034AD83 /* Config.swift in Sources */,
 				489D12F02A3AAF7F0034AD83 /* ChatKitWrapperView.swift in Sources */,
+				489D13582A413A0F0034AD83 /* HealthChatBot.swift in Sources */,
 				489D12DF2A3AA1B50034AD83 /* MainView.swift in Sources */,
 				489D12F52A3AC3000034AD83 /* ToyotaChatBot.swift in Sources */,
 				489D12EB2A3AA7BF0034AD83 /* ComposeView.swift in Sources */,
