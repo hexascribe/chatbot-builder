@@ -14,9 +14,15 @@ Welcome to the ChatBot Builder SDK, a powerful tool that enables developers to e
 - **Cross-Platform Compatibility**: Our SDK supports both Android and iOS platforms, allowing you to reach a wider audience and deliver consistent chatbot experiences across different devices;
 - **Powered by OpenAI API**: Leveraging the cutting-edge capabilities of the OpenAI API, our SDK ensures that your chatbot is equipped with state-of-the-art natural language processing and machine learning capabilities.
 
-## Showcases
+## 📽️ Showcases
 
-<img src="art/chat-fitness-showcase.gif" alt="App running" width="25%" height="25%" />
+### Fitness Coach
+
+<img src="art/chat-fitness-showcase.gif" alt="fitness-chat" width="25%" height="25%" />
+
+### Health GPT
+
+<img src="art/chat-health-showcase.gif" alt="health-chat" width="25%" height="25%" />
 
 ## ⚡️ Getting Started
 
