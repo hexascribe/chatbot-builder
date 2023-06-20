@@ -99,6 +99,10 @@ Take a look at our sample apps to learn how to use the SDK on different platform
 <br />
 [iOS Sample](samples/ios)
 
+## 🤝 Contributions
+
+Feel free to make a suggestion or if you find any error in this project, please open an issue. Make sure to read our [contribution guidelines](CONTRIBUTING.md) before.
+
 ## 📄 License
 
 ```
