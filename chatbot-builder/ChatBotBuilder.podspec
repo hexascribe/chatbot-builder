@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'ChatBotBuilder'
     spec.version                  = '0.0.1'
-    spec.homepage                 = 'https://github.com/ars-techna/chatbot-builder'
+    spec.homepage                 = 'https://github.com/arstechna/chatbot-builder'
     spec.source                   = { :http=> ''}
     spec.authors                  = 'Ars Techna'
     spec.license                  = 'LICENSE'

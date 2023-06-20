@@ -3,6 +3,7 @@ plugins {
     kotlin("native.cocoapods")
     id("com.android.library")
     id("org.jetbrains.compose")
+    id("com.vanniktech.maven.publish")
 }
 
 kotlin {
@@ -18,7 +19,7 @@ kotlin {
         authors = "Ars Techna"
         summary = "ChatBot Builder is a SDK that you can seamlessly customize the Chat UI to match the look and feel of your application, while also having the ability to define specific instructions for the bots behavior."
         license = "LICENSE"
-        homepage = "https://github.com/ars-techna/chatbot-builder"
+        homepage = "https://github.com/arstechna/chatbot-builder"
         ios.deploymentTarget = "14.1"
         podfile = project.file("../samples/ios/Podfile")
         framework {
@@ -64,10 +65,6 @@ android {
     compileSdk = libs.versions.compile.sdk.get().toInt()
     namespace = "com.arstechna.chatbotbuilder"
 
-    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
-    sourceSets["main"].res.srcDirs("src/androidMain/res")
-    sourceSets["main"].resources.srcDirs("src/commonMain/resources")
-
     defaultConfig {
         minSdk = libs.versions.min.sdk.get().toInt()
     }
@@ -80,5 +77,22 @@ android {
     }
     buildFeatures {
         compose = true
+    }
+}
+
+mavenPublishing {
+    pom {
+        developers {
+            developer {
+                id.set("osugikoji")
+                name.set("Koji Osugi")
+                url.set("https://github.com/osugikoji")
+            }
+            developer {
+                id.set("xyzwilliamxyz")
+                name.set("William")
+                url.set("https://github.com/xyzwilliamxyz")
+            }
+        }
     }
 }
