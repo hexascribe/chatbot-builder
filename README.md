@@ -16,9 +16,9 @@ Welcome to the ChatBot Builder SDK, a powerful tool that enables developers to e
 
 ## 📽️ Showcases
 
-|                                                 Fitness Coach                                                 |                                                Health GPT                                                |
-|:-------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------:|
-| <img src="art/chat-fitness-showcase.gif" alt="fitness-chat" width="25%" height="25%" title="Fitness Coach" /> | <img src="art/chat-health-showcase.gif" alt="health-chat" width="25%" height="25%" title="Health GPT" /> |
+|                         Fitness Coach                         |                         Health GPT                          |
+|:-------------------------------------------------------------:|:-----------------------------------------------------------:|
+| <img src="art/chat-fitness-showcase.gif" alt="fitness-chat"/> | <img src="art/chat-health-showcase.gif" alt="health-chat"/> |
 
 ### Fitness Coach
 
