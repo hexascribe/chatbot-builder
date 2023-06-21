@@ -19,12 +19,12 @@ kotlin {
 
 android {
     compileSdk = libs.versions.compile.sdk.get().toInt()
-    namespace = "com.arstechna.chatbotbuilder"
+    namespace = "com.hexascribe.chatbotbuilder"
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
 
     defaultConfig {
-        applicationId = "com.arstechna.chatbotbuilder"
+        applicationId = "com.hexascribe.chatbotbuilder"
         minSdk = libs.versions.min.sdk.get().toInt()
         targetSdk = libs.versions.target.sdk.get().toInt()
         versionCode = 1

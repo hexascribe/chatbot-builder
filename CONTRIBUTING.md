@@ -6,9 +6,9 @@ There are many ways to contribute:
 
 * 📣 Spread the project or its apps to the world
 * ✍️ Writing tutorials and blog posts
-* 📝 Create or update [the documentation](https://github.com/arstechna/chatbot-builder/wiki)
-* 🐛 Submit [bug reports](https://github.com/arstechna/chatbot-builder/issues)
-* 💡 Adding ideas and feature requests to [Discussions](https://github.com/arstechna/chatbot-builder/discussions)
+* 📝 Create or update [the documentation](https://github.com/hexascribe/chatbot-builder/wiki)
+* 🐛 Submit [bug reports](https://github.com/hexascribe/chatbot-builder/issues)
+* 💡 Adding ideas and feature requests to [Discussions](https://github.com/hexascribe/chatbot-builder/discussions)
 * 👩‍🎨 Create designs or UX flows
 * 🧑‍💻 Contribute code or review PRs
 
@@ -42,7 +42,7 @@ When you're happy with your changes, create Atomic commits on a **new feature br
 
 Atomic commits will make it easier to track down regressions. Also, it enables the ability to cherry-pick or revert a change if needed.
 
-1. Fork it (https://github.com/arstechna/chatbot-builder/fork)
+1. Fork it (https://github.com/hexascribe/chatbot-builder/fork)
 2. Create a new feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
@@ -53,18 +53,18 @@ Atomic commits will make it easier to track down regressions. Also, it enables t
 
 > If you find a security vulnerability, do NOT open an issue. Email [email] instead.
 
-1. Open the [issues tab](https://github.com/arstechna/chatbot-builder/issues) on github
-2. Click on [New issue](https://github.com/arstechna/chatbot-builder/issues/new/choose)
+1. Open the [issues tab](https://github.com/hexascribe/chatbot-builder/issues) on github
+2. Click on [New issue](https://github.com/hexascribe/chatbot-builder/issues/new/choose)
 3. Choose the bug report 🐛 template and fill out all required fields
 
 
 ## 💡 How to suggest a feature or enhancement
 
-Check [open issues](https://github.com/arstechna/chatbot-builder/issues) and [ongoing discussions](https://github.com/arstechna/chatbot-builder/discussions) for a list of proposed features.
+Check [open issues](https://github.com/hexascribe/chatbot-builder/issues) and [ongoing discussions](https://github.com/hexascribe/chatbot-builder/discussions) for a list of proposed features.
 
-If your suggestion can not be found already, see if it is already covered by our [Roadmap](https://github.com/arstechna/chatbot-builder#roadmap).
+If your suggestion can not be found already, see if it is already covered by our [Roadmap](https://github.com/hexascribe/chatbot-builder#roadmap).
 
-Otherwise, start a new [Discussion](https://github.com/arstechna/chatbot-builder/discussions) and see what other users and contributors think.
+Otherwise, start a new [Discussion](https://github.com/hexascribe/chatbot-builder/discussions) and see what other users and contributors think.
 
 
 ## 💾 Technology
