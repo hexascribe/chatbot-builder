@@ -7,7 +7,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
 
 @Stable
-open class Colors(
+public open class Colors(
     backgroundColor: Color,
     userBalloonColor: Color,
     userBalloonTextColor: Color,
@@ -24,38 +24,38 @@ open class Colors(
     loadingTextColor: Color,
     errorTextColor: Color,
 ) {
-    var backgroundColor by mutableStateOf(backgroundColor)
+    internal var backgroundColor: Color by mutableStateOf(backgroundColor)
 
-    var userBalloonColor by mutableStateOf(userBalloonColor)
+    internal var userBalloonColor: Color by mutableStateOf(userBalloonColor)
 
-    var userBalloonTextColor by mutableStateOf(userBalloonTextColor)
+    internal var userBalloonTextColor: Color by mutableStateOf(userBalloonTextColor)
 
-    var botBalloonColor by mutableStateOf(botBalloonColor)
+    internal var botBalloonColor: Color by mutableStateOf(botBalloonColor)
 
-    var botBalloonTextColor by mutableStateOf(botBalloonTextColor)
+    internal var botBalloonTextColor: Color by mutableStateOf(botBalloonTextColor)
 
-    var inputFieldBackgroundColor by mutableStateOf(inputFieldBackgroundColor)
+    internal var inputFieldBackgroundColor: Color by mutableStateOf(inputFieldBackgroundColor)
 
-    var inputFieldTextColor by mutableStateOf(inputFieldTextColor)
+    internal var inputFieldTextColor: Color by mutableStateOf(inputFieldTextColor)
 
-    var inputFieldHintColor by mutableStateOf(inputFieldHintColor)
+    internal var inputFieldHintColor: Color by mutableStateOf(inputFieldHintColor)
 
-    var inputFieldFocusedIndicatorColor by mutableStateOf(inputFieldFocusedIndicatorColor)
+    internal var inputFieldFocusedIndicatorColor: Color by mutableStateOf(inputFieldFocusedIndicatorColor)
 
-    var inputFieldUnfocusedIndicatorColor by mutableStateOf(inputFieldUnfocusedIndicatorColor)
+    internal var inputFieldUnfocusedIndicatorColor: Color by mutableStateOf(inputFieldUnfocusedIndicatorColor)
 
-    var cursorColor by mutableStateOf(cursorColor)
+    internal var cursorColor: Color by mutableStateOf(cursorColor)
 
-    var sendButtonColor by mutableStateOf(sendButtonColor)
+    internal var sendButtonColor: Color by mutableStateOf(sendButtonColor)
 
-    var dividerColor by mutableStateOf(dividerColor)
+    internal var dividerColor: Color by mutableStateOf(dividerColor)
 
-    var loadingTextColor by mutableStateOf(loadingTextColor)
+    internal var loadingTextColor: Color by mutableStateOf(loadingTextColor)
 
-    var errorTextColor by mutableStateOf(errorTextColor)
+    internal var errorTextColor: Color by mutableStateOf(errorTextColor)
 }
 
-class DarkColors(
+public class DarkColors(
     backgroundColor: Color = Color.Black,
     userBalloonColor: Color = Color.White,
     userBalloonTextColor: Color = Color.Black,
@@ -89,7 +89,7 @@ class DarkColors(
     errorTextColor = errorTextColor,
 )
 
-class DefaultColors(
+public class DefaultColors(
     backgroundColor: Color = Color.White,
     userBalloonColor: Color = Color.Black,
     userBalloonTextColor: Color = Color.White,

@@ -10,12 +10,12 @@ import com.hexascribe.chatbotbuilder.chat.theme.color.DarkColors
 import com.hexascribe.chatbotbuilder.chat.theme.color.DefaultColors
 import com.hexascribe.chatbotbuilder.impl.ChatBotImpl
 
-abstract class ChatBot {
+public abstract class ChatBot {
 
     @Composable
-    abstract fun ChatScreen()
+    public abstract fun ChatScreen()
 
-    class Builder(private val apiKey: String) : BaseBuilder<Color, ImageBitmap, ChatBot>() {
+    public class Builder(private val apiKey: String) : BaseBuilder<Color, ImageBitmap, ChatBot>() {
         override fun imageFactory(image: ImageBitmap): ImageBitmap {
             return image
         }
@@ -25,14 +25,14 @@ abstract class ChatBot {
         }
     }
 
-    class DarkColorsBuilder : BaseColorsBuilder<Color, DarkColors>() {
+    public class DarkColorsBuilder : BaseColorsBuilder<Color, DarkColors>() {
         override var colors: Colors = DarkColors()
         override fun colorFactory(color: Color): Color {
             return color
         }
     }
 
-    class DefaultColorsBuilder : BaseColorsBuilder<Color, DefaultColors>() {
+    public class DefaultColorsBuilder : BaseColorsBuilder<Color, DefaultColors>() {
         override var colors: Colors = DefaultColors()
         override fun colorFactory(color: Color): Color {
             return color

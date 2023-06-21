@@ -16,11 +16,11 @@ import com.hexascribe.chatbotbuilder.utils.toColor
 import com.hexascribe.chatbotbuilder.utils.toHexString
 import com.hexascribe.chatbotbuilder.utils.toSkiaImage
 
-abstract class ChatBot {
+public abstract class ChatBot {
 
-    abstract fun getViewController(): UIViewController
+    public abstract fun getViewController(): UIViewController
 
-    class Builder(private val apiKey: String) : BaseBuilder<UIColor, UIImage, ChatBot>() {
+    public class Builder(private val apiKey: String) : BaseBuilder<UIColor, UIImage, ChatBot>() {
         override fun imageFactory(image: UIImage): ImageBitmap? {
             return image.toSkiaImage()?.toComposeImageBitmap()
         }
@@ -30,14 +30,14 @@ abstract class ChatBot {
         }
     }
 
-    class DarkColorsBuilder : BaseColorsBuilder<UIColor, DarkColors>() {
+    public class DarkColorsBuilder : BaseColorsBuilder<UIColor, DarkColors>() {
         override var colors: Colors = DarkColors()
         override fun colorFactory(color: UIColor): Color {
             return color.toHexString().toColor
         }
     }
 
-    class DefaultColorsBuilder : BaseColorsBuilder<UIColor, DefaultColors>() {
+    public class DefaultColorsBuilder : BaseColorsBuilder<UIColor, DefaultColors>() {
         override var colors: Colors = DefaultColors()
         override fun colorFactory(color: UIColor): Color {
             return color.toHexString().toColor

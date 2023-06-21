@@ -1,6 +1,6 @@
 package com.hexascribe.chatbotbuilder.base
 
-enum class RoleEnum {
+public enum class RoleEnum {
     SYSTEM, USER, ASSISTANT;
 
     internal companion object {
