@@ -4,8 +4,8 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.Composable
-import com.arstechna.chatbotbuilder.ChatBot
-import com.arstechna.chatbotbuilder.base.RoleEnum
+import com.hexascribe.chatbotbuilder.ChatBot
+import com.hexascribe.chatbotbuilder.base.RoleEnum
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

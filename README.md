@@ -31,7 +31,7 @@ First, you need to obtain the OpenAI API Key, which can be acquired from your [O
 ChatBot Builder supports iOS 14.1+ and Xcode 12.1+. We are using CocoaPods as dependency manager. Add the following to your Podfile:
 
 ```ruby
-pod 'ChatBotBuilder', :git => 'https://github.com/ars-techna/chatbot-builder.git', :tag => '0.0.1'
+pod 'ChatBotBuilder', :git => 'https://github.com/hexa-scribe/chatbot-builder.git', :tag => '0.0.1'
 ```
 
 See the code snippet below on how to initialize and use the SDK in SwiftUI:
@@ -75,7 +75,7 @@ repositories {
 Then, simply import the dependency to your `build.gradle` dependencies:
 
 ```kotlin
-implementation("io.github.arstechna:chatbot-builder:0.0.1")
+implementation("io.github.hexascribe:chatbot-builder:0.0.1")
 ```
 
 Take a look at the Kotlin code snippet below for an example of how to initialize and use the SDK:
@@ -108,7 +108,7 @@ Feel free to make a suggestion or if you find any error in this project, please 
 ## 📄 License
 
 ```
-    Copyright 2023 Ars Techna
+    Copyright 2023 Hexa Scribe
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

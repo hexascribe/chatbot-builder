@@ -16,10 +16,10 @@ kotlin {
     cocoapods {
         name = "ChatBotBuilder"
         version = "0.0.1"
-        authors = "Ars Techna"
+        authors = "Hexa Scribe"
         summary = "ChatBot Builder is a SDK that you can seamlessly customize the Chat UI to match the look and feel of your application, while also having the ability to define specific instructions for the bots behavior."
         license = "LICENSE"
-        homepage = "https://github.com/arstechna/chatbot-builder"
+        homepage = "https://github.com/hexascribe/chatbot-builder"
         ios.deploymentTarget = "14.1"
         podfile = project.file("../samples/ios/Podfile")
         framework {
@@ -71,7 +71,7 @@ kotlin {
 
 android {
     compileSdk = libs.versions.compile.sdk.get().toInt()
-    namespace = "com.arstechna.chatbotbuilder"
+    namespace = "com.hexascribe.chatbotbuilder"
 
     defaultConfig {
         minSdk = libs.versions.min.sdk.get().toInt()

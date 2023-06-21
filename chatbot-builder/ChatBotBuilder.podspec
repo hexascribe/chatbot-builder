@@ -1,9 +1,9 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'ChatBotBuilder'
     spec.version                  = '0.0.1'
-    spec.homepage                 = 'https://github.com/arstechna/chatbot-builder'
+    spec.homepage                 = 'https://github.com/hexascribe/chatbot-builder'
     spec.source                   = { :http=> ''}
-    spec.authors                  = 'Ars Techna'
+    spec.authors                  = 'Hexa Scribe'
     spec.license                  = 'LICENSE'
     spec.summary                  = 'ChatBot Builder is a SDK that you can seamlessly customize the Chat UI to match the look and feel of your application, while also having the ability to define specific instructions for the bots behavior.'
     spec.vendored_frameworks      = 'build/cocoapods/framework/ChatBotBuilder.framework'
