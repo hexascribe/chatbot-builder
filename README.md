@@ -12,7 +12,7 @@ Welcome to the ChatBot Builder SDK, a powerful tool that enables developers to e
 - **Customizable Chat UI**: Tailor the appearance of the chatbot to seamlessly blend with your application's design. Personalize the colors and layout to create a consistent and engaging user experience;
 - **Behavior Customization**: Define the behavior of your chatbot by passing instructions to guide its responses. You have full control over how the bot interacts with users, ensuring it aligns perfectly with your application's requirements;
 - **Cross-Platform Compatibility**: Our SDK supports both Android and iOS platforms, allowing you to reach a wider audience and deliver consistent chatbot experiences across different devices;
-- **Powered by OpenAI API**: Leveraging the cutting-edge capabilities of the OpenAI API, our SDK ensures that your chatbot is equipped with state-of-the-art natural language processing and machine learning capabilities.
+- **Powered by [OpenAI API](https://beta.openai.com/docs/api-reference)**: Leveraging the cutting-edge capabilities of the [OpenAI API](https://beta.openai.com/docs/api-reference), our SDK ensures that your chatbot is equipped with state-of-the-art natural language processing and machine learning capabilities.
 
 ## 📽️ Showcases
 
@@ -23,6 +23,8 @@ Welcome to the ChatBot Builder SDK, a powerful tool that enables developers to e
 ## ⚡️ Getting Started
 
 First, you need to obtain the OpenAI API Key, which can be acquired from your [OpenAI Platform Account](https://platform.openai.com/account/api-keys).
+
+> **Note**: OpenAI encourages using environment variables for the API key. [Read more](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety).
 
 ### iOS setup
 
