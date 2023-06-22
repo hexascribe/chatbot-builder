@@ -1,5 +1,6 @@
 ![badge](http://img.shields.io/badge/-android-6EDB8D.svg?style=flat)
 ![badge](http://img.shields.io/badge/-ios-CDCDCD.svg?style=flat)
+![Maven Central](https://img.shields.io/maven-central/v/com.hexascribe/chatbot-builder)
 [![License: MIT](https://img.shields.io/badge/license-Apache-blue)](https://opensource.org/license/apache-2-0/)
 ![ChatBot-Builder](art/logo.png)
 
