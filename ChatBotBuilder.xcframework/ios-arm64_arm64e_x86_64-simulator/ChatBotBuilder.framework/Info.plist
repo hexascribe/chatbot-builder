@@ -5,7 +5,7 @@
 	<key>CFBundleExecutable</key>
 	<string>ChatBotBuilder</string>
 	<key>CFBundleIdentifier</key>
-	<string>ChatBotBuilder</string>
+	<string>com.hexascribe.chatbotbuilder.ChatBotBuilder</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

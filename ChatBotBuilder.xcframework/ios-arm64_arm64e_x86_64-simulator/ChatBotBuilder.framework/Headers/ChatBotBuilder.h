@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class UIViewController, CBBBaseBuilder<COLOR, IMAGE, VIEW>, CBBRoleEnum, CBBDarkColors, CBBBaseColorsBuilder<T, C>, CBBDefaultColors, CBBChatBot, UIColor, UIImage, CBBColors, CBBKotlinEnumCompanion, CBBKotlinEnum<E>, CBBKotlinArray<T>, CBBMaterial_icons_coreIcons, CBBMaterial_icons_coreIconsFilled, CBBUiImageVector, CBBUiImageVectorCompanion, CBBUiVectorGroup, CBBUiVectorNode, CBBUi_graphicsPathNode;
+@class UIViewController, CBBBaseBuilder<COLOR, IMAGE, VIEW>, CBBRoleEnum, CBBDarkColors, CBBBaseColorsBuilder<T, C>, CBBDefaultColors, CBBChatBot, UIColor, UIImage, CBBColors, CBBKotlinEnumCompanion, CBBKotlinEnum<E>, CBBKotlinArray<T>;
 
-@protocol CBBKotlinComparable, CBBKotlinIterator, CBBKotlinIterable;
+@protocol CBBKotlinComparable, CBBKotlinIterator;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -223,21 +223,6 @@ __attribute__((swift_name("ChatBot.DefaultColorsBuilder")))
 __attribute__((swift_name("Colors")))
 @interface CBBColors : CBBBase
 - (instancetype)initWithBackgroundColor:(uint64_t)backgroundColor userBalloonColor:(uint64_t)userBalloonColor userBalloonTextColor:(uint64_t)userBalloonTextColor botBalloonColor:(uint64_t)botBalloonColor botBalloonTextColor:(uint64_t)botBalloonTextColor inputFieldBackgroundColor:(uint64_t)inputFieldBackgroundColor inputFieldTextColor:(uint64_t)inputFieldTextColor inputFieldHintColor:(uint64_t)inputFieldHintColor inputFieldFocusedIndicatorColor:(uint64_t)inputFieldFocusedIndicatorColor inputFieldUnfocusedIndicatorColor:(uint64_t)inputFieldUnfocusedIndicatorColor cursorColor:(uint64_t)cursorColor sendButtonColor:(uint64_t)sendButtonColor dividerColor:(uint64_t)dividerColor loadingTextColor:(uint64_t)loadingTextColor errorTextColor:(uint64_t)errorTextColor __attribute__((swift_name("init(backgroundColor:userBalloonColor:userBalloonTextColor:botBalloonColor:botBalloonTextColor:inputFieldBackgroundColor:inputFieldTextColor:inputFieldHintColor:inputFieldFocusedIndicatorColor:inputFieldUnfocusedIndicatorColor:cursorColor:sendButtonColor:dividerColor:loadingTextColor:errorTextColor:)"))) __attribute__((objc_designated_initializer));
-@property uint64_t backgroundColor __attribute__((swift_name("backgroundColor")));
-@property uint64_t botBalloonColor __attribute__((swift_name("botBalloonColor")));
-@property uint64_t botBalloonTextColor __attribute__((swift_name("botBalloonTextColor")));
-@property uint64_t cursorColor __attribute__((swift_name("cursorColor")));
-@property uint64_t dividerColor __attribute__((swift_name("dividerColor")));
-@property uint64_t errorTextColor __attribute__((swift_name("errorTextColor")));
-@property uint64_t inputFieldBackgroundColor __attribute__((swift_name("inputFieldBackgroundColor")));
-@property uint64_t inputFieldFocusedIndicatorColor __attribute__((swift_name("inputFieldFocusedIndicatorColor")));
-@property uint64_t inputFieldHintColor __attribute__((swift_name("inputFieldHintColor")));
-@property uint64_t inputFieldTextColor __attribute__((swift_name("inputFieldTextColor")));
-@property uint64_t inputFieldUnfocusedIndicatorColor __attribute__((swift_name("inputFieldUnfocusedIndicatorColor")));
-@property uint64_t loadingTextColor __attribute__((swift_name("loadingTextColor")));
-@property uint64_t sendButtonColor __attribute__((swift_name("sendButtonColor")));
-@property uint64_t userBalloonColor __attribute__((swift_name("userBalloonColor")));
-@property uint64_t userBalloonTextColor __attribute__((swift_name("userBalloonTextColor")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -283,20 +268,6 @@ __attribute__((swift_name("RoleEnum")))
 @end
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Material_icons_coreIcons")))
-@interface CBBMaterial_icons_coreIcons : CBBBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)icons __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) CBBMaterial_icons_coreIcons *shared __attribute__((swift_name("shared")));
-@property (readonly) CBBMaterial_icons_coreIconsFilled *Default __attribute__((swift_name("Default")));
-@end
-
-@interface CBBMaterial_icons_coreIcons (Extensions)
-- (CBBUiImageVector *)IconBot __attribute__((swift_name("IconBot()")));
-@end
-
-__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("KotlinEnumCompanion")))
 @interface CBBKotlinEnumCompanion : CBBBase
 + (instancetype)alloc __attribute__((unavailable));
@@ -317,96 +288,11 @@ __attribute__((swift_name("KotlinArray")))
 @property (readonly) int32_t size __attribute__((swift_name("size")));
 @end
 
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Material_icons_coreIcons.Filled")))
-@interface CBBMaterial_icons_coreIconsFilled : CBBBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)filled __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) CBBMaterial_icons_coreIconsFilled *shared __attribute__((swift_name("shared")));
-@end
-
-
-/**
- * @note annotations
- *   androidx.compose.runtime.Immutable
-*/
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UiImageVector")))
-@interface CBBUiImageVector : CBBBase
-@property (class, readonly, getter=companion) CBBUiImageVectorCompanion *companion __attribute__((swift_name("companion")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-@property (readonly) BOOL autoMirror __attribute__((swift_name("autoMirror")));
-@property (readonly) float defaultHeight __attribute__((swift_name("defaultHeight")));
-@property (readonly) float defaultWidth __attribute__((swift_name("defaultWidth")));
-@property (readonly) NSString *name __attribute__((swift_name("name")));
-@property (readonly) CBBUiVectorGroup *root __attribute__((swift_name("root")));
-@property (readonly) int32_t tintBlendMode __attribute__((swift_name("tintBlendMode")));
-@property (readonly) uint64_t tintColor __attribute__((swift_name("tintColor")));
-@property (readonly) float viewportHeight __attribute__((swift_name("viewportHeight")));
-@property (readonly) float viewportWidth __attribute__((swift_name("viewportWidth")));
-@end
-
 __attribute__((swift_name("KotlinIterator")))
 @protocol CBBKotlinIterator
 @required
 - (BOOL)hasNext __attribute__((swift_name("hasNext()")));
 - (id _Nullable)next __attribute__((swift_name("next()")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UiImageVector.Companion")))
-@interface CBBUiImageVectorCompanion : CBBBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) CBBUiImageVectorCompanion *shared __attribute__((swift_name("shared")));
-@end
-
-__attribute__((swift_name("UiVectorNode")))
-@interface CBBUiVectorNode : CBBBase
-@end
-
-__attribute__((swift_name("KotlinIterable")))
-@protocol CBBKotlinIterable
-@required
-- (id<CBBKotlinIterator>)iterator __attribute__((swift_name("iterator()")));
-@end
-
-
-/**
- * @note annotations
- *   androidx.compose.runtime.Immutable
-*/
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UiVectorGroup")))
-@interface CBBUiVectorGroup : CBBUiVectorNode <CBBKotlinIterable>
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (CBBUiVectorNode *)getIndex:(int32_t)index __attribute__((swift_name("get(index:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (id<CBBKotlinIterator>)iterator __attribute__((swift_name("iterator()")));
-@property (readonly) NSArray<CBBUi_graphicsPathNode *> *clipPathData __attribute__((swift_name("clipPathData")));
-@property (readonly) NSString *name __attribute__((swift_name("name")));
-@property (readonly) float pivotX __attribute__((swift_name("pivotX")));
-@property (readonly) float pivotY __attribute__((swift_name("pivotY")));
-@property (readonly) float rotation __attribute__((swift_name("rotation")));
-@property (readonly) float scaleX __attribute__((swift_name("scaleX")));
-@property (readonly) float scaleY __attribute__((swift_name("scaleY")));
-@property (readonly) int32_t size __attribute__((swift_name("size")));
-@property (readonly) float translationX __attribute__((swift_name("translationX")));
-@property (readonly) float translationY __attribute__((swift_name("translationY")));
-@end
-
-
-/**
- * @note annotations
- *   androidx.compose.runtime.Immutable
-*/
-__attribute__((swift_name("Ui_graphicsPathNode")))
-@interface CBBUi_graphicsPathNode : CBBBase
-@property (readonly) BOOL isCurve __attribute__((swift_name("isCurve")));
-@property (readonly) BOOL isQuad __attribute__((swift_name("isQuad")));
 @end
 
 #pragma pop_macro("_Nullable_result")
