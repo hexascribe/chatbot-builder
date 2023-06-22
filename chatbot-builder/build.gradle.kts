@@ -17,7 +17,7 @@ kotlin {
 
     cocoapods {
         name = "ChatBotBuilder"
-        version = "0.0.1"
+        version = "1.0.0"
         authors = "Hexa Scribe"
         summary = "ChatBot Builder is a SDK that you can seamlessly customize the Chat UI to match the look and feel of your application, while also having the ability to define specific instructions for the bots behavior."
         license = "LICENSE"
