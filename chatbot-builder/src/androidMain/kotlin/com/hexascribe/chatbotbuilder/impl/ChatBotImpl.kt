@@ -3,6 +3,7 @@ package com.hexascribe.chatbotbuilder.impl
 import androidx.compose.runtime.Composable
 import com.hexascribe.chatbotbuilder.ChatBot
 import com.hexascribe.chatbotbuilder.chat.model.ChatDefaults
+import com.hexascribe.chatbotbuilder.chat.screen.ChatScreen
 
 internal class ChatBotImpl(
     private val apiKey: String,
@@ -10,7 +11,7 @@ internal class ChatBotImpl(
 ) : ChatBot() {
 
     @Composable
-    override fun ChatScreen() {
-        com.hexascribe.chatbotbuilder.chat.screen.ChatScreen(apiKey, chatDefaults = chatDefaults)
+    override fun ComposeScreen() {
+        ChatScreen(apiKey, chatDefaults = chatDefaults)
     }
 }

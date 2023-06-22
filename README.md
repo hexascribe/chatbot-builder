@@ -89,7 +89,7 @@ fun ChatScreen() {
         .addPreSeededMessage(RoleEnum.SYSTEM, "You are a helpful seller car assistant")
         .setInputFieldBorderWidth(1)
         .build()
-    chatBot.ChatScreen()
+    chatBot.ComposeScreen()
 }
 ```
 
