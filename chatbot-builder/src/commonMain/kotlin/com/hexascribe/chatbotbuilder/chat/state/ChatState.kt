@@ -3,11 +3,12 @@ package com.hexascribe.chatbotbuilder.chat.state
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
+import co.yml.ychat.YChat
+import co.yml.ychat.entrypoint.features.ChatCompletions
 import com.hexascribe.chatbotbuilder.base.RoleEnum
 import com.hexascribe.chatbotbuilder.chat.model.ChatDefaults
 import com.hexascribe.chatbotbuilder.chat.model.MessageType
-import co.yml.ychat.YChat
-import co.yml.ychat.entrypoint.features.ChatCompletions
+import com.hexascribe.chatbotbuilder.logger.PlatformLogger
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -50,7 +51,7 @@ internal class ChatState(
         runCatching { chatCompletions.execute(messageToSend) }
             .also { onLoading(false) }
             .onSuccess { messages.add(MessageType.Bot(it.first().content)) }
-            .onFailure { onError(true) }
+            .onFailure { handleFailure(it) }
     }
 
     private fun onLoading(isLoading: Boolean) {
@@ -61,6 +62,11 @@ internal class ChatState(
             messages.remove(MessageType.Loading)
         }
         verifyButtonVisible()
+    }
+
+    private fun handleFailure(throwable: Throwable) {
+        if (chatDefaults.isLogErrorEnabled) PlatformLogger.logError(throwable)
+        onError(true)
     }
 
     private fun onError(isError: Boolean) {

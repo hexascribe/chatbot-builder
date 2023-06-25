@@ -23,6 +23,7 @@ fun ChatScreen() {
         .addMessage(RoleEnum.ASSISTANT, "Hi, how can I help you today?")
         .addPreSeededMessage(RoleEnum.SYSTEM, "You are a helpful seller car assistant")
         .setInputFieldBorderWidth(1)
+        .setLogError(true)
         .build()
     chatBot.ComposeScreen()
 }

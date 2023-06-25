@@ -134,6 +134,16 @@ public abstract class BaseBuilder<COLOR, IMAGE : Any, VIEW : Any> {
     }
 
     /**
+     * Sets the log error flag.
+     * @param isEnabled Specifies whether logging of errors should be enabled or not.
+     * @return The instance of the BaseBuilder with the updated log error flag.
+     */
+    public fun setLogError(isEnabled: Boolean): BaseBuilder<COLOR, IMAGE, VIEW> {
+        defaults.isLogErrorEnabled = isEnabled
+        return this
+    }
+
+    /**
      * Creates an ImageBitmap object from the provided UIImage.
      * @param image The UIImage to be converted.
      * @return The corresponding ImageBitmap, or null if conversion fails.

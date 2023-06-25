@@ -30,6 +30,7 @@ internal data class ChatDefaults(
     var inputFieldHint: String = "Send a message",
     var botIconBitmap: ImageBitmap? = null,
     var maxTokens: Int = 1024,
+    var isLogErrorEnabled: Boolean = false,
 ) {
 
     val colors by lazy {
