@@ -166,6 +166,7 @@ __attribute__((swift_name("BaseBuilder")))
 - (CBBBaseBuilder<COLOR, IMAGE, VIEW> *)setInputFieldBorderWidthBorderWidth:(int32_t)borderWidth __attribute__((swift_name("setInputFieldBorderWidth(borderWidth:)")));
 - (CBBBaseBuilder<COLOR, IMAGE, VIEW> *)setInputFieldCornerRadiusCornerRadius:(int32_t)cornerRadius __attribute__((swift_name("setInputFieldCornerRadius(cornerRadius:)")));
 - (CBBBaseBuilder<COLOR, IMAGE, VIEW> *)setInputFieldHintHint:(NSString *)hint __attribute__((swift_name("setInputFieldHint(hint:)")));
+- (CBBBaseBuilder<COLOR, IMAGE, VIEW> *)setLogErrorIsEnabled:(BOOL)isEnabled __attribute__((swift_name("setLogError(isEnabled:)")));
 - (CBBBaseBuilder<COLOR, IMAGE, VIEW> *)setMaxTokensTokens:(int32_t)tokens __attribute__((swift_name("setMaxTokens(tokens:)")));
 @end
 
