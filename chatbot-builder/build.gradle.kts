@@ -9,7 +9,7 @@ plugins {
 kotlin {
     explicitApi()
 
-    android()
+    androidTarget()
 
     iosX64()
     iosArm64()
@@ -78,12 +78,18 @@ android {
     defaultConfig {
         minSdk = libs.versions.min.sdk.get().toInt()
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+
     buildFeatures {
         compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
 }
 

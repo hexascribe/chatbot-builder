@@ -1,27 +1,12 @@
 plugins {
-    kotlin("multiplatform")
-    id("com.android.application")
-    id("org.jetbrains.compose")
-}
-
-kotlin {
-    android()
-    sourceSets {
-        val androidMain by getting {
-            dependencies {
-                implementation(project(":chatbot-builder"))
-                implementation(libs.activity.compose)
-                implementation(libs.app.compat)
-            }
-        }
-    }
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.compose)
 }
 
 android {
     compileSdk = libs.versions.compile.sdk.get().toInt()
     namespace = "com.hexascribe.chatbotbuilder"
-
-    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
 
     defaultConfig {
         applicationId = "com.hexascribe.chatbotbuilder"
@@ -30,8 +15,28 @@ android {
         versionCode = 1
         versionName = "1.0"
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+
+    buildFeatures {
+        compose = true
+        buildConfig = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+dependencies {
+    implementation(project(":chatbot-builder"))
+    implementation(libs.activity.compose)
+    implementation(libs.app.compat)
 }

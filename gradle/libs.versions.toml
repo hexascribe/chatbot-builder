@@ -1,15 +1,21 @@
 [versions]
+# Libs
 ychat = "1.4.1"
-kotlin = "1.8.20"
-composePlugin = "1.4.0"
-gradlePlugin = "8.0.2"
+kotlin = "1.9.21"
+composePlugin = "1.5.12"
+gradlePlugin = "8.2.2"
 publishPlugin = "0.24.0"
-activityCompose = "1.7.2"
-coreKtx = "1.10.1"
+activityCompose = "1.8.2"
+coreKtx = "1.12.0"
 appCompat = "1.6.1"
-compile-sdk = "33"
+
+# Plugin
+composeCompiler = "1.5.7"
+
+# Config
+compile-sdk = "34"
 min-sdk = "24"
-target-sdk = "33"
+target-sdk = "34"
 
 [libraries]
 # Network
@@ -22,4 +28,5 @@ app-compat = { group = "androidx.appcompat", name = "appcompat", version.ref = "
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "gradlePlugin" }
-android-library = { id = "com.android.library", version.ref = "gradlePlugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose = { id = "org.jetbrains.compose", version.ref = "composePlugin" }

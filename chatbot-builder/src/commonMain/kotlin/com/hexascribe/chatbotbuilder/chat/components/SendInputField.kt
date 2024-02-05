@@ -9,7 +9,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Send
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -28,7 +27,6 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import com.hexascribe.chatbotbuilder.chat.model.ChatDefaults
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 internal fun SendInputField(
     value: String,
@@ -70,9 +68,10 @@ internal fun SendInputField(
                 style = MaterialTheme.typography.bodyMedium
             )
         },
-        colors = TextFieldDefaults.textFieldColors(
-            textColor = chatDefaults.colors.inputFieldTextColor,
-            containerColor = chatDefaults.colors.inputFieldBackgroundColor,
+        colors = TextFieldDefaults.colors(
+            focusedTextColor = chatDefaults.colors.inputFieldTextColor,
+            focusedContainerColor = chatDefaults.colors.inputFieldBackgroundColor,
+            unfocusedContainerColor = chatDefaults.colors.inputFieldBackgroundColor,
             focusedIndicatorColor = Color.Unspecified,
             unfocusedIndicatorColor = Color.Unspecified,
             disabledIndicatorColor = Color.Unspecified,

@@ -1,5 +1,6 @@
 package com.hexascribe.chatbotbuilder.utils
 
+import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.get
 import org.jetbrains.skia.ColorAlphaType
 import org.jetbrains.skia.ColorType
@@ -19,6 +20,7 @@ import platform.CoreGraphics.CGImageGetHeight
 import platform.CoreGraphics.CGImageGetWidth
 import platform.UIKit.UIImage
 
+@ExperimentalForeignApi
 internal fun UIImage.toSkiaImage(): Image? {
     val imageRef =
         CGImageCreateCopyWithColorSpace(this.CGImage, CGColorSpaceCreateDeviceRGB()) ?: return null
@@ -30,9 +32,8 @@ internal fun UIImage.toSkiaImage(): Image? {
     val data = CGDataProviderCopyData(CGImageGetDataProvider(imageRef))
     val bytePointer = CFDataGetBytePtr(data)
     val length = CFDataGetLength(data)
-    val alphaInfo = CGImageGetAlphaInfo(imageRef)
 
-    val alphaType = when (alphaInfo) {
+    val alphaType = when (CGImageGetAlphaInfo(imageRef)) {
         CGImageAlphaInfo.kCGImageAlphaPremultipliedFirst, CGImageAlphaInfo.kCGImageAlphaPremultipliedLast -> ColorAlphaType.PREMUL
         CGImageAlphaInfo.kCGImageAlphaFirst, CGImageAlphaInfo.kCGImageAlphaLast -> ColorAlphaType.UNPREMUL
         CGImageAlphaInfo.kCGImageAlphaNone, CGImageAlphaInfo.kCGImageAlphaNoneSkipFirst, CGImageAlphaInfo.kCGImageAlphaNoneSkipLast -> ColorAlphaType.OPAQUE

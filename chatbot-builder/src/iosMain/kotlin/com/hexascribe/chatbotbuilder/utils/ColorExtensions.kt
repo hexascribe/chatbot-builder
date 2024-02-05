@@ -1,6 +1,7 @@
 package com.hexascribe.chatbotbuilder.utils
 
 import androidx.compose.ui.graphics.Color
+import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.alloc
 import kotlinx.cinterop.memScoped
 import kotlinx.cinterop.ptr
@@ -17,6 +18,7 @@ internal val String.toColor
             .toLong(16) or 0x00000000FF000000
     )
 
+@OptIn(ExperimentalForeignApi::class)
 internal fun UIColor.toHexString(): String {
     memScoped {
         val red = alloc<CGFloatVar>()
