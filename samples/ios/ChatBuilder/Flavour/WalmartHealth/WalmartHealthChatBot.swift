@@ -28,6 +28,7 @@ class WalmartHealthChatBot: ChatBotFactory {
             .setBotIcon(image: UIImage(named: "ic_walmart")!)
             .addMessage(role: .assistant, content: initialBotMessage)
             .addPreSeededMessage(role: .system, content: preSeededMessages)
+            .setLogError(isEnabled: true)
             .build()
     }
     
