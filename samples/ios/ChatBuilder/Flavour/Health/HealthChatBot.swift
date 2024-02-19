@@ -29,6 +29,7 @@ class HealthChatBot: ChatBotFactory {
             .setDefaultColorsBuilder(defaultColorsBuilder: colors)
             .addMessage(role: .assistant, content: initialBotMessage)
             .addPreSeededMessage(role: .system, content: preSeededMessages)
+            .setLogError(isEnabled: true)
             .build()
     }
     

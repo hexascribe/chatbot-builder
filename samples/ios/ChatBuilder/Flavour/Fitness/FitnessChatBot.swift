@@ -34,6 +34,7 @@ class FitnessChatBot: ChatBotFactory {
             .setDarkColorsBuilder(darkColorsBuilder: colors)
             .addMessage(role: .assistant, content: initialBotMessage)
             .addPreSeededMessage(role: .system, content: preSeededMessages)
+            .setLogError(isEnabled: true)
             .build()
     }
     

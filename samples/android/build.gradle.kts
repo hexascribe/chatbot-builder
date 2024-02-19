@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -14,6 +16,17 @@ android {
         targetSdk = libs.versions.target.sdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
+
+        val errorMessage =
+            "API key not found. Please insert the api.key in the System environment or inside local.properties file."
+        val key = "api.key"
+        val apiKey = System
+            .getenv()
+            .getOrDefault(
+                key, gradleLocalProperties(rootDir)[key]
+                    ?: throw IllegalArgumentException(errorMessage)
+            )
+        buildConfigField("String", "API_KEY", "\"$apiKey\"")
     }
 
     compileOptions {
