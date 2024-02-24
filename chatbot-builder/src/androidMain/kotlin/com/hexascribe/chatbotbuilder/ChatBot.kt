@@ -1,14 +1,19 @@
 package com.hexascribe.chatbotbuilder
 
+import android.content.Context
+import androidx.annotation.DrawableRes
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.core.graphics.drawable.toBitmap
 import com.hexascribe.chatbotbuilder.core.base.BaseBuilder
 import com.hexascribe.chatbotbuilder.core.base.BaseColorsBuilder
+import com.hexascribe.chatbotbuilder.impl.ChatBotImpl
 import com.hexascribe.chatbotbuilder.presentation.theme.color.Colors
 import com.hexascribe.chatbotbuilder.presentation.theme.color.DarkColors
 import com.hexascribe.chatbotbuilder.presentation.theme.color.DefaultColors
-import com.hexascribe.chatbotbuilder.impl.ChatBotImpl
 
 /**
  * The ChatBot Builder is a SDK that allows seamless customization of the Chat UI to match the look
@@ -30,6 +35,18 @@ public abstract class ChatBot {
      * to get the api key.
      */
     public class Builder(private val apiKey: String) : BaseBuilder<Color, ImageBitmap, ChatBot>() {
+
+        public fun setBotIcon(
+            context: Context,
+            @DrawableRes resourceId: Int
+        ): BaseBuilder<Color, ImageBitmap, ChatBot> {
+            val imageBitmap = AppCompatResources.getDrawable(context, resourceId)
+                ?.toBitmap()
+                ?.asImageBitmap()
+            defaults.botIconBitmap = imageBitmap
+            return this
+        }
+
         override fun imageFactory(image: ImageBitmap): ImageBitmap {
             return image
         }

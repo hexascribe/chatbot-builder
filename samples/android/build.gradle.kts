@@ -52,4 +52,8 @@ dependencies {
     implementation(project(":chatbot-builder"))
     implementation(libs.activity.compose)
     implementation(libs.app.compat)
+    implementation(libs.material3)
+    implementation(libs.compose.navigation)
+    implementation(libs.compose.tooling.preview)
+    debugImplementation(libs.compose.tooling)
 }

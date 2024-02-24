@@ -5,6 +5,7 @@ ktor = "2.3.8"
 kotlin = "1.9.21"
 activityCompose = "1.8.2"
 appCompat = "1.6.1"
+compose = "1.6.1"
 
 # Plugin
 composePlugin = "1.5.12"
@@ -31,6 +32,14 @@ koin = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 # AndroidX
 activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 app-compat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appCompat" }
+app-compat-resources = { module = "androidx.appcompat:appcompat-resources", version.ref = "appCompat" }
+core-ktx = { module = "androidx.core:core-ktx", version = "1.12.0" }
+
+# Compose
+material3 = { module = "androidx.compose.material3:material3", version = "1.2.0" }
+compose-navigation = { module = "androidx.navigation:navigation-compose", version = "2.7.7" }
+compose-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+compose-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "gradlePlugin" }

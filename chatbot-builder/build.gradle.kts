@@ -32,17 +32,6 @@ kotlin {
         extraSpecAttributes["resources"] = "['src/commonMain/resources/**', 'src/iosMain/resources/**']"
     }
 
-    dependencies {
-        constraints {
-            commonMainImplementation("org.jetbrains.kotlinx:atomicfu") {
-                version {
-                    strictly("[0.20.2,)")
-                }
-                because("https://youtrack.jetbrains.com/issue/KT-57235")
-            }
-        }
-    }
-
     sourceSets {
         commonMain.dependencies {
             @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
@@ -58,6 +47,8 @@ kotlin {
 
         androidMain.dependencies {
             implementation(libs.ktor.client.okhttp)
+            implementation(libs.app.compat.resources)
+            implementation(libs.core.ktx)
         }
 
         iosMain.dependencies {
@@ -67,7 +58,7 @@ kotlin {
 }
 
 kotlin {
-    android {
+    androidTarget {
         publishLibraryVariants("release")
     }
 }
