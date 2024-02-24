@@ -10,7 +10,9 @@ plugins {
 kotlin {
     explicitApi()
 
-    androidTarget()
+    androidTarget {
+        compilations.all { kotlinOptions { freeCompilerArgs += "-Xexpect-actual-classes" } }
+    }
 
     iosX64()
     iosArm64()

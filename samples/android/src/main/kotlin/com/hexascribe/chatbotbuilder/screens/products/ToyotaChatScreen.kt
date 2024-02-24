@@ -27,7 +27,7 @@ fun ToyotaChatScreen(navController: NavController) {
             .setInputFieldFocusedIndicatorColor(Color.Toyota)
             .setSendButtonColor(Color.Toyota)
         val chatBot = ChatBot.Builder(BuildConfig.API_KEY)
-            .setBotIcon(LocalContext.current, R.drawable)
+            .setBotIcon(LocalContext.current, R.drawable.ic_toyota)
             .setDefaultColorsBuilder(colors)
             .addMessage(RoleEnum.ASSISTANT, initialMessage)
             .addPreSeededMessage(RoleEnum.SYSTEM, preSeededMessages)
